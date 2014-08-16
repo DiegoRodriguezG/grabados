@@ -32,6 +32,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'passenger'
+
 gem 'foundation-rails'
 
 gem 'debugger'
