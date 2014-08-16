@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+lock '3.1.0'
 
 set :application, 'grabados'
 set :repo_url, 'git@github.com:DiegoRodriguezG/grabados.git'
@@ -10,6 +10,7 @@ set :repo_url, 'git@github.com:DiegoRodriguezG/grabados.git'
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/home/ubuntu/grabados'
 
+set :deploy_via, :remote_cache
 # Default value for :scm is :git
 # set :scm, :git
 
@@ -46,13 +47,13 @@ namespace :deploy do
 
   after :publishing, :restart
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
+  # after :restart, :clear_cache do
+  #   on roles(:web), in: :groups, limit: 3, wait: 10 do
+  #     # Here we can do anything such as:
+  #     # within release_path do
+  #     #   execute :rake, 'cache:clear'
+  #     # end
+  #   end
+  # end
 
 end
