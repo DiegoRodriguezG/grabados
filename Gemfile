@@ -32,11 +32,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Deploy with Capistrano
-gem 'capistrano'
-gem 'rvm-capistrano'
-gem 'capistrano-ext'
-
 gem 'foundation-rails'
 
 gem 'debugger'
