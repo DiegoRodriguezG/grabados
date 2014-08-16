@@ -36,7 +36,6 @@ gem 'passenger'
 
 gem 'foundation-rails'
 
-gem 'debugger'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
