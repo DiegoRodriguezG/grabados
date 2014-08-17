@@ -1,3 +1,96 @@
 // Place all the styles related to the public controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: 'Quicksand';
+  src: asset-url('Quicksand-Light.otf');
+}
+
+body{
+	background-color: #F3F3F3;
+	font-family: 'quicksand';
+}
+
+#inicio{
+	background-color: #999;
+	height: 100%;
+	/*-moz-box-shadow: 0px 0px 17px #000000;
+	-webkit-box-shadow: 0px 0px 17px #000000;
+	box-shadow: 0px 0px 17px #000000;*/
+}
+
+#trabajos{
+	background-color: #F2F5F7;
+	height: 70%;
+	padding: 30px 0;
+	h2{
+		color: rgb(80, 106, 133)
+	}
+	h5{
+		font-size:  22px;
+		color: #73879C;
+	}
+}
+
+#servicios{
+	background-color: #e4e4e4;
+	height: 30%;
+	padding: 15px 0;
+	color: #696E74;
+	h3{
+		font-size: 31px;
+	}
+	h5{
+		font-size: 16px;
+		padding-top: 28px;
+		line-height: 24px;
+	}
+}
+
+#clientes{
+	background-color: #fff;
+	height: 100%;
+	padding: 50px 0;
+	h2{
+		color: #506A85;
+		margin-bottom: 50px;
+	}
+}
+
+#contacto{
+	/*background: url("http://static.wixstatic.com/media/046779_33db950d96bdc6723b2c00fb0e0c94bd.jpg_srz_p_826_619_85_22_0.50_1.20_0.00_jpg_srz") no-repeat center -127px;
+	background-size: cover;*/
+	/*filter: blur(2px);
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);*/
+	padding: 40px 0;
+	background-color: #428bca;
+	height: 40%;
+	h2{
+		color: #fff;
+	}
+	.button{
+		background-color: #1ABB9C;
+	}
+}
+
+#mapa{
+	height: 60%;
+	iframe{
+		height: 100%;
+		width: 100%;
+	}
+}
+
+#footer{
+	height: 10%;
+	padding: 21px 0;
+	background-color: #2F4052;
+	h6{
+		color: #707E8C;
+		font-size: 13px;
+	}
+}
