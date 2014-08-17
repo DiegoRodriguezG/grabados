@@ -18,7 +18,7 @@
 #server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
 
 set :stage, :production
-server "54.191.102.30", user: "ubuntu", roles: %w{web app db}
+server "54.200.59.228", user: "ubuntu", roles: %w{web app db}
 set :branch, "master"
 
 
