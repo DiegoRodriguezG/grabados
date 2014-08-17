@@ -39,6 +39,10 @@ gem 'foundation-rails'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
+group :production do
+  gem 'rails_12factor'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
