@@ -7,9 +7,22 @@
   src: asset-url('Quicksand-Light.otf');
 }
 
+@font-face {
+  font-family: 'QuicksandItalic';
+  src: asset-url('Quicksand-LightItalic.otf');
+}
+
+@font-face {
+  font-family: 'Alex';
+  src: asset-url('AlexBrush-Regular.ttf');
+}
+
 body{
 	font-family: 'Quicksand';
 	background-color: #F3F3F3;
+	a{
+		font-family: 'Quicksand';
+	}
 }
 
 #inicio{
@@ -17,12 +30,19 @@ body{
 	height: 100%;
 	padding: 200px 0;
 	h1{
+		font-family: 'Quicksand';
 		font-size: 47px;
 	}
 	h2{
-		line-height: 37px;
+		font-family: 'Alex';
+		font-size: 50px;
 		padding-bottom: 26px;
-		font-weight: 100;
+		small{
+			color: #eee;
+		}
+	}
+	a{
+		font-family: 'Quicksand';
 	}
 }
 
@@ -31,9 +51,11 @@ body{
 	height: 70%;
 	padding: 30px 0;
 	h2{
+		font-family: 'Quicksand';
 		color: rgb(80, 106, 133)
 	}
 	h5{
+		font-family: 'Quicksand';
 		font-size:  22px;
 		color: #73879C;
 	}
@@ -45,9 +67,11 @@ body{
 	padding: 15px 0;
 	color: #696E74;
 	h3{
+		font-family: 'Quicksand';
 		font-size: 31px;
 	}
 	h5{
+		font-family: 'QuicksandItalic';
 		font-size: 16px;
 		padding-top: 28px;
 		line-height: 24px;
@@ -59,6 +83,7 @@ body{
 	height: 100%;
 	padding: 50px 0;
 	h2{
+		font-family: 'Quicksand';
 		color: #506A85;
 		margin-bottom: 50px;
 	}
@@ -72,13 +97,15 @@ body{
 	-moz-filter: blur(2px);
 	-o-filter: blur(2px);
 	-ms-filter: blur(2px);*/
-	padding: 40px 0;
+	padding: 25px 0;
 	background-color: #428bca;
 	height: 40%;
 	h2{
+		font-family: 'Quicksand';
 		color: #fff;
 	}
 	.button{
+		font-family: 'Quicksand';
 		background-color: #1ABB9C;
 	}
 }
@@ -96,6 +123,7 @@ body{
 	padding: 21px 0;
 	background-color: #2F4052;
 	h6{
+		font-family: 'Quicksand';
 		color: #707E8C;
 		font-size: 13px;
 	}
