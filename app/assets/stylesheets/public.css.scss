@@ -43,6 +43,7 @@ body{
 	}
 	a{
 		font-family: 'Quicksand';
+		background-color: #1ABB9C
 	}
 }
 
@@ -99,8 +100,8 @@ body{
 	-o-filter: blur(2px);
 	-ms-filter: blur(2px);*/
 	padding: 25px 0;
-	background-color: #428bca;
-	height: 40%;
+	background-color: #999;
+	height: 50%;
 	h2{
 		font-family: 'Quicksand';
 		color: #fff;
@@ -112,7 +113,7 @@ body{
 }
 
 #mapa{
-	height: 60%;
+	height: 50%;
 	iframe{
 		height: 100%;
 		width: 100%;
