@@ -4,13 +4,24 @@ lock '3.1.0'
 set :application, 'grabados'
 set :repo_url, 'git@github.com:DiegoRodriguezG/grabados.git'
 
+set :user, 'deploy'
+set :password, 'panzer000'
+set :branch, "master"
+set :deploy_to, "/home/deploy/grabados"
+set :use_sudo, false
+
+set :scm, :git
+set :keep_releases, 1
+
+role :web, "45.55.162.64"
+role :app, "45.55.162.64"
+
 # Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/ubuntu/grabados'
+# set :deploy_to, '/var/www/my_app'
 
-set :deploy_via, :remote_cache
 # Default value for :scm is :git
 # set :scm, :git
 
@@ -41,19 +52,19 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
-      execute :touch, release_path.join('tmp/restart.txt')
+      # execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
   after :publishing, :restart
 
-  # after :restart, :clear_cache do
-  #   on roles(:web), in: :groups, limit: 3, wait: 10 do
-  #     # Here we can do anything such as:
-  #     # within release_path do
-  #     #   execute :rake, 'cache:clear'
-  #     # end
-  #   end
-  # end
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
 
 end
