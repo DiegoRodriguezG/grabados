@@ -55,5 +55,5 @@ group :development do
 	gem 'capistrano-rails', '~> 1.1'
 	gem 'capistrano-bundler', '~> 1.1.2'
 	gem 'capistrano-rvm'
-	gem 'debugger', '>= 1.6.6'
+	gem 'pry'
 end
