@@ -34,7 +34,7 @@ end
 
 gem 'passenger'
 
-gem 'foundation-rails'
+gem 'foundation-rails', '5.4.3.1'
 
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby

@@ -51,9 +51,9 @@ GEM
     colorize (0.7.5)
     erubis (2.7.0)
     execjs (2.4.0)
-    foundation-rails (5.5.0.0)
+    foundation-rails (5.4.3.1)
       railties (>= 3.1.0)
-      sass (>= 3.2.0, < 3.4)
+      sass (>= 3.2.0)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (1.5.3)
@@ -156,7 +156,7 @@ DEPENDENCIES
   capistrano-rvm
   coffee-rails (~> 4.0.0)
   execjs
-  foundation-rails
+  foundation-rails (= 5.4.3.1)
   jbuilder (~> 1.2)
   jquery-rails
   passenger
