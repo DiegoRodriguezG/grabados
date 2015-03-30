@@ -22,5 +22,19 @@ module Grabados
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
     config.assets.precompile += %w( .svg .eot .woff .ttf )
+
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "grabadosbaron.cl",
+      :user_name            => "drodriguez@winnot.com",
+      :password             => "panzer000",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "grabadosbaron.cl"
+    }
   end
 end

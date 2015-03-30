@@ -6,7 +6,16 @@
     <dd data-magellan-arrival="contacto"><a href="#contacto">Contacto</a></dd>
   </dl>
 </div>
-
+<div class="row min-height">
+  <div class="large-12 columns">
+    <% flash.each do |name, msg| %>
+    	<div data-alert class="alert-box">
+    		<%= content_tag :div, msg, id: "flash_#{name}" %>
+    		<a href="#" class="close">&times;</a>
+    	</div>
+    <% end %>
+  </div>
+</div>
 <section class="fullscreen" id="inicio">
 	<div class="row">
 	  <div class="large-12 columns">
@@ -51,7 +60,7 @@
 <section class="fullscreen" id="servicios">
 	<div class="row">
 	  <div class="large-12 columns text-center">
-	  	<h3>Calidad - Rapidez - Envío sin costo</h3>
+	  	<h3>Calidad y Rapidez</h3>
 	  </div>
 	</div>
 
@@ -101,38 +110,38 @@
 	  </div>
 	</div>
 
-	<div class="row">
-	  <div class="large-6 columns text-center">
-	  	<div class="row">
-	  		<div class="large-6 columns text-center">.</div>
-	  		<div class="large-6 columns text-center">
-	  			<input type="text" placeholder="Nombre persona o empresa">
-	  		</div>	 
-	  	</div>
-	  	<div class="row">
-	  		<div class="large-6 columns text-center">.</div>
-	  		<div class="large-6 columns text-right">
-	  			<input type="text" placeholder="Email">
-	  		</div>	
-	  	</div>
-	  </div>
-	  <div class="large-6 columns text-center">
-	  	<div class="row">
-	  		<div class="large-6 columns text-center">
-	  			<textarea placeholder="Tu mensaje"></textarea>
-	  		</div>
-	  	</div>
-	  </div>
-	</div>
+	<%= form_tag contact_path do %>
 
-	<!-- <input type="text" placeholder="Email"> -->
-	<!-- <input type="text" placeholder="Nombre de persona o empresa"> -->
-
-	<div class="row">
-		<div class="large-12 columns text-center">
-		  <a href="#" class="button">Enviar</a>
+		<div class="row">
+		  <div class="large-6 columns text-center">
+		  	<div class="row">
+		  		<div class="large-6 columns text-center">.</div>
+		  		<div class="large-6 columns text-center">
+		  			<input type="text" name="contact[name]" placeholder="Nombre persona o empresa">
+		  		</div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="large-6 columns text-center">.</div>
+		  		<div class="large-6 columns text-right">
+		  			<input type="text" name="contact[email]" placeholder="Email">
+		  		</div>
+		  	</div>
+		  </div>
+		  <div class="large-6 columns text-center">
+		  	<div class="row">
+		  		<div class="large-6 columns text-center">
+		  			<textarea name="contact[message]" placeholder="Tu mensaje"></textarea>
+		  		</div>
+		  	</div>
+		  </div>
 		</div>
-	</div>
+		<div class="row">
+			<div class="large-12 columns text-center">
+			  <button class="button" type="submit">Enviar</button>
+			</div>
+		</div>
+
+	<% end %>
 
 	<div class="row">
 		<div class="large-12 columns text-center">
