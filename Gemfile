@@ -57,3 +57,5 @@ group :development do
 	gem 'capistrano-rvm'
 	gem 'pry'
 end
+
+gem 'email_validator'
