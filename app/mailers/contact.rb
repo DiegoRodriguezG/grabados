@@ -3,6 +3,6 @@ class Contact < ActionMailer::Base
 
   def client_contact params
   	@contact_params = params
-  	mail(to: "diego@magickdevs.com", subject: "GrabadosBaron.cl - ¡Nuevo mensaje desde el sitio!")
+  	mail(to: "grabadosbaron@gmail.com", subject: "GrabadosBaron.cl - ¡Nuevo mensaje desde el sitio!")
   end
 end
