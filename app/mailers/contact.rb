@@ -1,5 +1,5 @@
 class Contact < ActionMailer::Base
-  default from: "drodriguez@winnot.com"
+  default from: "drodriguezgonz@gmail.com"
 
   def client_contact params
   	@contact_params = params

@@ -24,11 +24,11 @@ module Grabados
     config.assets.precompile += %w( .svg .eot .woff .ttf )
 
     config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
+      :address              => "smtp.mandrillapp.com",
       :port                 => 587,
       :domain               => "grabadosbaron.cl",
-      :user_name            => "drodriguez@winnot.com",
-      :password             => "panzer000",
+      :user_name            => "drodriguezgonz@gmail.com",
+      :password             => "_1iatECMxMh7jbzOIFakoQ",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
