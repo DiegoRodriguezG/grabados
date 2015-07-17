@@ -1,4 +1,5 @@
 Grabados::Application.routes.draw do
+  get "campaign/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,6 +9,11 @@ Grabados::Application.routes.draw do
   controller :public do
     get '/products/:category' => :products, as: 'public_products'
     post '/contact' => :contact
+  end
+
+  controller :campaign do
+    get '/campaign' => :index
+    post '/campaign' => :send_email, as: 'send'
   end
 
   # Example of regular route:

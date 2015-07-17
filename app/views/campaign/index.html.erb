@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="small-12 columns">
+  	<h1>Campaña</h1>
+
+  	<div class="row min-height">
+		  <div class="large-12 columns">
+		    <% flash.each do |name, msg| %>
+		    	<div data-alert class="alert-box">
+		    		<%= content_tag :div, msg, id: "flash_#{name}" %>
+		    		<a href="#" class="close">&times;</a>
+		    	</div>
+		    <% end %>
+		  </div>
+		</div>
+
+		<%= form_tag send_path, method: :post do %>
+
+			<div class="row">
+			  <div class="small-6 columns text-center">
+			  	<p>Emails de usuarios</p>
+			  </div>
+			  <div class="small-6 columns text-left">
+			  	<%= text_area_tag 'emails' %>
+			  </div>
+			</div>
+
+
+
+			<div class="row">
+			  <div class="small-12 columns text-center">
+			  	<%= button_tag "Enviar", type: "submit" %>
+			  </div>
+			</div>
+
+		<% end %>
+  </div>
+</div>
